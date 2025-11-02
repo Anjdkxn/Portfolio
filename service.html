@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankush Gautam | Services</title>
+  <style type="text/css">
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #0b0c10;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #66fcf1;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #66fcf1;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Service Section */
+.service {
+  height: 90vh;
+  background: #1f2833;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #66fcf1;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #c5c6c7;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.service-box {
+  background: #0b0c10;
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 30%;
+  min-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  border: 2px solid #66fcf1;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #66fcf1;
+}
+
+.service-box h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.service-box p {
+  font-size: 0.95rem;
+  color: #c5c6c7;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .service {
+    height: auto;
+    padding: 80px 5%;
+  }
+
+  .service-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 90%;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 220px;
+    background: #0b0c10;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.4s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ankush Gautam</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="service.html" class="active">Service</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Service Section -->
+  <section class="service" id="service">
+    <h1 class="section-title">My Services</h1>
+    <p class="section-subtitle">What I can do for you</p>
+
+    <div class="service-container">
+      <div class="service-box">
+        <div class="service-icon">💻</div>
+        <h3>Web Development</h3>
+        <p>Building fast, responsive, and modern websites using HTML, CSS, and JavaScript.</p>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>Designing clean, user-friendly interfaces with attention to detail and usability.</p>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">⚙️</div>
+        <h3>Web Optimization</h3>
+        <p>Improving site performance, SEO, and loading speed for the best user experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
+
+  </script>
+</body>
+</html>
